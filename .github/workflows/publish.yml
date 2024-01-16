@@ -24,6 +24,12 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
+      - name: List directory contents
+        run: ls -l
+
+      - name: Display yarn.lock file
+        run: cat yarn.lock
+
       - name: Build
         run: yarn build
 
