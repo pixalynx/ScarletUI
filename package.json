@@ -1,7 +1,6 @@
 {
   "name": "scarlet-ui",
   "description": "UI Library built with shadcn and tailwindcss",
-  "private": false,
   "version": "0.0.0",
   "type": "module",
   "files": [
