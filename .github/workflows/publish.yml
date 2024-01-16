@@ -32,15 +32,15 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Bump version and push tag
-        run: |
-          git config --global user.name 'pixalynx'
-          # Use npm version to bump the version (you can specify "patch", "minor", or "major")
-          npm version patch
-          # Commit and tag the change
-          git push --follow-tags
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Bump version and push tag
+      #   run: |
+      #     git config --global user.name 'pixalynx'
+      #     # Use npm version to bump the version (you can specify "patch", "minor", or "major")
+      #     npm version patch
+      #     # Commit and tag the change
+      #     git push --follow-tags
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish
         run: yarn publish --non-interactive
