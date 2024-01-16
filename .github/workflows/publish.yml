@@ -35,15 +35,9 @@ jobs:
       - name: Bump version and push tag
         run: |
           git config --global user.name 'pixalynx'
-          # Queue a version change (modify package.json directly or use a yarn version command)
-          # Example: Increment patch version manually in package.json
-          node -e "let pkg=require('./package.json'); let [major, minor, patch] = pkg.version.split('.').map(Number); pkg.version = `${major}.${minor}.${patch + 1}`; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
-          # Apply the version change
-          yarn version apply --all
+          # Use npm version to bump the version (you can specify "patch", "minor", or "major")
+          npm version patch
           # Commit and tag the change
-          git add package.json
-          git commit -m "Bump version [skip ci]"
-          git tag v$(node -p "require('./package.json').version")
           git push --follow-tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
