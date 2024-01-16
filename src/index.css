@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-alternate {
+    @apply bg-white ring-0 border-gray-200 text-gray-900 !important;
+  }
+  .btn-alternate:hover {
+    @apply bg-gray-100/30 !important;
+  }
+  .btn-alternate:disabled:hover {
+    @apply bg-white !important;
+  }
+
+  .btn {
+    @apply bg-primary text-primary-foreground ring-primary-foreground;
+  }
+
+  .combined-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+      rgb(55, 93, 251) 0px 0px 0px 1px, rgba(79, 81, 89, 0.32) 0px 4px 4px -4px,
+      rgba(79, 81, 89, 0.03) 0px 2px 5px -2px,
+      rgba(255, 255, 255, 0.15) 0px 1px 0px 0px inset,
+      rgb(55, 93, 251) 0px -2.4px 0px 0px inset,
+      rgba(55, 93, 251, 0.2) 0px 1px 3px 0px, rgb(17, 20, 230) 0px 0px 1px 1px;
+  }
+
+  .combined-shadow-bg-gray-100 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px 2px inset,
+      rgba(0, 0, 0, 0.15) 0px 0px 0px 1px,
+      rgba(60, 64, 67, 0.3) 0px 4px 4px -4px,
+      rgba(60, 64, 67, 0.05) 0px 2px 5px -2px,
+      rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -2.4px 0px 0px inset,
+      rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(60, 64, 67, 0.25) 0px 0px 1px 1px;
+  }
+
+  .combined-shadow-bg-gray-50 {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 2px 2px inset,
+      rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+      rgba(60, 64, 67, 0.22) 0px 4px 4px -4px,
+      rgba(60, 64, 67, 0.04) 0px 2px 5px -2px,
+      rgba(255, 255, 255, 0.18) 0px 1px 0px 0px inset,
+      rgba(0, 0, 0, 0.08) 0px -2.4px 0px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px 1px 3px 0px, rgba(60, 64, 67, 0.2) 0px 0px 1px 1px;
+  }
+
+  tbody tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  tbody tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
