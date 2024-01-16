@@ -17,11 +17,8 @@ jobs:
         with:
           node-version: "20.11.0" # Use Node.js version 16 or later
 
-      # - name: Enable Corepack
-      #   run: corepack enable
-
-      - name: Install Specific Yarn Version
-        run: npm install -g yarn@4.0.2
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install Dependencies
         run: yarn install --ignore-path
