@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "20.11.0" # Use Node.js version 16 or later
-          # cache: "yarn"
 
       - name: Enable Corepack
         run: corepack enable
