@@ -21,6 +21,9 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
+      - name: Install TypeScript
+        run: yarn global add typescript
+
       - name: Install Dependencies
         run: yarn install
 
