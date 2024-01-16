@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "20.11.0" # Use Node.js version 16 or later
+          registry-url: "https://registry.npmjs.org"
 
       - name: Enable Corepack
         run: corepack enable
@@ -42,7 +43,7 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish
-        run: npm publish --access public --ignore-scripts
+      - run: yarn
+      - run: yarn npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_ACESS_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
