@@ -21,7 +21,7 @@ jobs:
         run: corepack enable
 
       - name: Install Dependencies
-        run: yarn install --ignore-path
+        run: yarn install
 
       - name: List directory contents
         run: ls -l
