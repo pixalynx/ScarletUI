@@ -1,14 +1,14 @@
 {
   "name": "scarlet-ui",
   "description": "UI Library built with shadcn and tailwindcss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "dist/scarlet-ui-umd.cjs",
   "module": "dist/scarlet-ui.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/scarlet-ui.d.ts",
   "exports": {
     ".": {
       "import": "./dist/scarlet-ui.js",
