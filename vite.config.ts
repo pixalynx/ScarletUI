@@ -3,6 +3,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
+const root = path.resolve(__dirname, "./src/index.ts");
 const componentsPath = path.resolve(__dirname, "./src/components/index.tsx");
 const layoutsPath = path.resolve(__dirname, "./src/layouts/index.tsx");
 
@@ -17,6 +18,12 @@ const config = {
     entry: layoutsPath,
     name: "Scarlet",
     fileName: `scarlet-layout`,
+  },
+
+  scarlet: {
+    entry: root,
+    name: "Scarlet",
+    fileName: `scarlet-ui`,
   },
 };
 
@@ -51,5 +58,10 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), dts({ rollupTypes: true })],
+  plugins: [
+    react(),
+    dts({
+      rollupTypes: true,
+    }),
+  ],
 });

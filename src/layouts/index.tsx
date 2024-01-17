@@ -1,1 +1,1 @@
-export * from "@/layouts/Page";
+export * from "@/layouts/Page/index";
