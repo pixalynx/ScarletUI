@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h1>The react library to build custom libraries fast using Tailwind and shadcn</h1>
 
-Currently, two official plugins are available:
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Scarlet UI is not just a library; it's a foundation. It's fully open-source, inviting you to tailor its modular components to your specific needs. Whether you're constructing intuitive dashboards, sophisticated data visualizations, or anything in between, Scarlet UI provides the flexibility and robustness you need to bring your creative visions to life.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Welcome to Scarlet UI, where your journey into custom UI design begins. Our library is designed to be as adaptable as it is easy to use. Here's how to get started with forking our repository and making it your own:
 
-- Configure the top-level `parserOptions` property like this:
+### Clone the Repository
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+TODO
+
+<br>
+
+## Installing the library
+
+```bash
+npm install scarlet-ui
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Example
+
+With Tremor creating an analytical interface is easy.
+
+<br>
+
+```jsx
+import { Button } from "scarlet-ui";
+export default () => (
+  <div>
+    <Button variant="fancy">Hello world</Button>
+  </div>
+);
+```
+
+<br>
+
+## License
+
+TODO
+
+Copyright &copy; 2024 Pixalynx. All rights reserved.

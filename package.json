@@ -1,7 +1,7 @@
 {
   "name": "scarlet-ui",
   "description": "UI Library built with shadcn and tailwindcss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist"
@@ -14,14 +14,21 @@
       "import": "./dist/scarlet-ui.js",
       "require": "./dist/scarlet-ui-umd.cjs"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css",
+    "./layout": {
+      "import": "./dist/scarlet-layout.js",
+      "require": "./dist/scarlet-layout-umd.cjs"
+    }
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "clear": "rm -rf dist",
+    "build:ui": "tsc && LIB_NAME=scarlet_ui vite build",
+    "build:layout": "tsc && LIB_NAME=scarlet_layout vite build",
+    "build": "yarn run clear && yarn run build:ui && yarn run build:layout",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "LIB_NAME=scarlet_ui storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
