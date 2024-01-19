@@ -24,12 +24,13 @@ npm install scarlet-ui
 
 ## Example
 
-With Tremor creating an analytical interface is easy.
+Here is a simple example of using scarlet-ui
 
 <br>
 
 ```jsx
 import { Button } from "scarlet-ui";
+import "scarlet-ui/style.css";
 export default () => (
   <div>
     <Button variant="fancy">Hello world</Button>

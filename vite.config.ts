@@ -7,6 +7,7 @@ const root = path.resolve(__dirname, "./src/index.ts");
 const componentsPath = path.resolve(__dirname, "./src/components/index.tsx");
 const layoutsPath = path.resolve(__dirname, "./src/layouts/index.tsx");
 
+// we tried to have multiple configs but couldnt get multiple index.d.ts files out correctly
 const config = {
   scarlet_ui: {
     entry: componentsPath,
